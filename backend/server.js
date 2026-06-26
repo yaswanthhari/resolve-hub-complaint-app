@@ -12,15 +12,12 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 
-const { MongoMemoryServer } = require('mongodb-memory-server');
-
 // Database Connection
 const connectDB = async () => {
   try {
-    const mongoServer = await MongoMemoryServer.create();
-    const uri = mongoServer.getUri();
+    const uri = process.env.MONGO_URI || 'mongodb+srv://yaswanthhari2004:Yaswanth%401881%40@cluster0.o5hck.mongodb.net/resolvehub?retryWrites=true&w=majority&appName=Cluster0';
     await mongoose.connect(uri);
-    console.log('MongoDB connected successfully');
+    console.log('MongoDB connected successfully to Atlas');
   } catch (err) {
     console.error('MongoDB connection error:', err);
   }

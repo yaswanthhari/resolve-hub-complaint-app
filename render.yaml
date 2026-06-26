@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: resolvehub-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: generate_a_super_secret_key_here
+      - key: MONGO_URI
+        value: mongodb+srv://yaswanthhari2004:Yaswanth%401881%40@cluster0.o5hck.mongodb.net/resolvehub?retryWrites=true&w=majority&appName=Cluster0
