@@ -7,6 +7,11 @@ ResolveHub is a premium, modern web application designed to streamline the proce
 
 👉 **[Watch the Demo Video Here](#)** 👈
 
+## 🌐 Live Application
+*(Paste your deployed website link below)*
+
+👉 **[Access the Live Project Here](#)** 👈
+
 ---
 
 ## ✨ Features
